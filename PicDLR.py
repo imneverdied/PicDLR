@@ -7,7 +7,9 @@ import os
 資料夾名稱 = "設定資料夾名稱"
 網址前段 = "圖片網址前段"
 總頁數 = 30  # 總頁數
+圖片格式 = ".jpg"
 數字補0 = 1
+
 # 數字補0參數說明:
 # 1:不用補0
 # 2:補到2位
@@ -18,10 +20,11 @@ for i in range(總頁數):  # 第一頁~最後一頁
     if not os.path.exists(資料夾名稱):
         os.mkdir(資料夾名稱)  # 建立資料夾
     img = requests.get(
-        f"{網址前段}{input_image}.jpg")  # 下載圖片
+        f"{網址前段}{input_image}{圖片格式}")  # 下載圖片
 
-    with open(資料夾名稱+"\\" + str(input_image) + ".png", "wb") as file:  # 開啟資料夾及命名圖片檔
-        print("已下載", 資料夾名稱 + str(input_image) + ".png")
+    # 開啟資料夾及命名圖片檔
+    with open(資料夾名稱+"\\" + str(input_image) + {圖片格式}, "wb") as file:
+        print("已下載", 資料夾名稱 + str(input_image) + {圖片格式})
         file.write(img.content)  # 寫入圖片的二進位碼
 
 print("下載完畢")
