@@ -23,8 +23,8 @@ for i in range(總頁數):  # 第一頁~最後一頁
         f"{網址前段}{input_image}{圖片格式}")  # 下載圖片
 
     # 開啟資料夾及命名圖片檔
-    with open(資料夾名稱+"\\" + str(input_image) + {圖片格式}, "wb") as file:
-        print("已下載", 資料夾名稱 + str(input_image) + {圖片格式})
+    with open(資料夾名稱+"\\" + str(input_image) + 圖片格式, "wb") as file:
+        print("已下載", 資料夾名稱 + str(input_image) + 圖片格式)
         file.write(img.content)  # 寫入圖片的二進位碼
 
 print("下載完畢")
