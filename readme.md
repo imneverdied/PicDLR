@@ -19,5 +19,5 @@ https://範例.com/01.png ~ https://範例.com/10.png </br>
 資料夾名稱 = "範例資料夾"</br>
 網址前段 = "https://範例.com/"</br>
 總頁數 = 10 </br>
-圖片格式 = "png"</br>
+圖片格式 = ".png"</br>
 數字補0 = 1</br>
